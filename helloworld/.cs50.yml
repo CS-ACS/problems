@@ -1,13 +1,13 @@
 check50:
   checks:
     hello world:
-      - run: python3 hello.py
+      - run: ./hello
         stdout: Hello, world!
         exit: 0
 
 submit50:
   checks:
     hello world:
-      - run: python3 hello.py
+      - run:  ./hello
         stdout: Hello, world!
         exit: 0
