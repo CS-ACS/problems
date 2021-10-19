@@ -67,9 +67,9 @@ def testrand3():
 
 
 def compare_outputs(dividend, divisor, stdout):
-    output = "floored quotient: " + dividend // divisor + "\n"
-    output += "remainder: " + dividend % divisor + "\n"
-    output += "quotient: " + round(dividend/divisor, 3)
+    output = "floored quotient: " + str(dividend // divisor) + "\n"
+    output += "remainder: " + str(dividend % divisor) + "\n"
+    output += "quotient: " + str(round(dividend/divisor, 3))
 
     if output == stdout.rstrip("\n"):
         return
