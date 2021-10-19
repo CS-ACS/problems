@@ -24,12 +24,12 @@ def test83():
 
 
 def split_test_io(filename):
-    str = Path(filename+".md").read_text()
+    str = Path(filename).read_text()
     dict = {}
 
     dict['in'] = str[str.index("phrase: ")+8:str.index("\n", str.index("phrase: "))]
     dict['out'] = str[str.index("\n"):].rstrip("\n")
-    
+
     return dict
 
 def compare_outputs(filename, stdout):
