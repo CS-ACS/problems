@@ -1,0 +1,6 @@
+phrase: in the aeroplane over the sea
+characters: 29
+letters: 24
+words: 6
+average word length: 4.000
+In The Aeroplane Over The Sea

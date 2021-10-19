@@ -1,0 +1,6 @@
+phrase: TWO words!
+characters: 10
+letters: 8
+words: 2
+average word length: 4.000
+Two Words!

@@ -1,0 +1,6 @@
+phrase: the last great american dynasty
+characters: 31
+letters: 27
+words: 5
+average word length: 5.400
+The Last Great American Dynasty

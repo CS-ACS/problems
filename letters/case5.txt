@@ -1,0 +1,6 @@
+phrase: Dr. Strangelove or: how I learned to stop worrying and love the bomb
+characters: 68
+letters: 54
+words: 13
+average word length: 4.154
+Dr. Strangelove Or: How I Learned To Stop Worrying And Love The Bomb
