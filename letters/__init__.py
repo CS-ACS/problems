@@ -1,6 +1,6 @@
 import check50
 import check50.c
-from random import randint
+from pathlib import Path
 
 @check50.check()
 def exists():
@@ -24,11 +24,12 @@ def test83():
 
 
 def split_test_io(filename):
-    with open(filename) as file:
-        dict = {}
-        str = file.readlines()
-        dict['in'] = str[str.index("phrase: ")+8:str.index("\n", str.index("phrase: "))]
-        dict['out'] = str[str.index("\n"):].rstrip("\n")
+    str = Path(filename+".md").read_text()
+    dict = {}
+
+    dict['in'] = str[str.index("phrase: ")+8:str.index("\n", str.index("phrase: "))]
+    dict['out'] = str[str.index("\n"):].rstrip("\n")
+    
     return dict
 
 def compare_outputs(filename, stdout):
