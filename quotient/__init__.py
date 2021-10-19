@@ -71,7 +71,7 @@ def compare_outputs(dividend, divisor, stdout):
     output += "remainder: " + str(dividend % divisor) + "\n"
     output += "quotient: " + '{:.3f}'.format(round(dividend/divisor, 3))
 
-    if output == stdout.rstrip("\n"):
+    if output == stdout.lower().rstrip("\n"):
         return
 
     raise check50.Mismatch(output, stdout)
