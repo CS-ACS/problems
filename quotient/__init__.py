@@ -44,7 +44,7 @@ def test041():
     dividend = randint(1, 999)
     divisor = randint(1, dividend)
 
-    out = check50.run("./quotient").stdin(dividend).stdin(divisor).stdout()
+    out = check50.run("./quotient").stdin(str(dividend).stdin(str(divisor)).stdout()
     compare_outputs(dividend, divisor, out)
 
 @check50.check(compiles)
@@ -53,7 +53,7 @@ def test041():
     divisor = randint(1, 999)
     dividend = randint(1, divisor)
 
-    out = check50.run("./quotient").stdin(dividend).stdin(divisor).stdout()
+    out = check50.run("./quotient").stdin(str(dividend).stdin(str(divisor)).stdout()
     compare_outputs(dividend, divisor, out)
 
 @check50.check(compiles)
@@ -62,7 +62,7 @@ def test041():
     divisor = randint(1, 999)
     dividend = randint(1, 999)
 
-    out = check50.run("./quotient").stdin(dividend).stdin(divisor).stdout()
+    out = check50.run("./quotient").stdin(str(dividend).stdin(str(divisor)).stdout()
     compare_outputs(dividend, divisor, out)
 
 
