@@ -16,29 +16,41 @@ def compiles():
 
 
 @check50.check(compiles)
-def test83():
+def testWORD():
     """WORD"""
     io = split_test_io("case1.txt")
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
-    compare_outputs(8, 3, out)
 
+@check50.check(compiles)
+def testWORD():
+    """TWO words!"""
+    io = split_test_io("case2.txt")
+    out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
+
+@check50.check(compiles)
+def testWORD():
+    """in the aeroplane over the sea"""
+    io = split_test_io("case3.txt")
+    out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
+
+@check50.check(compiles)
+def testWORD():
+    """the last great american dynasty"""
+    io = split_test_io("case4.txt")
+    out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
+
+@check50.check(compiles)
+def testWORD():
+    """Dr. Strangelove or: how I learned to stop worrying and love the bomb"""
+    io = split_test_io("case5.txt")
+    out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
 
 def split_test_io(filename):
     str = Path(filename).read_text()
     dict = {}
 
     dict['in'] = str[str.index("phrase: ")+8:str.index("\n", str.index("phrase: "))]
-    dict['out'] = str[str.index("\n"):].rstrip("\n")
+    dict['out'] = str[str.index("\n")+1:].rstrip("\n")
 
     return dict
-
-def compare_outputs(filename, stdout):
-    output = "floored letters: " + str(dividend // divisor) + "\n"
-    output += "remainder: " + str(dividend % divisor) + "\n"
-    output += "letters: " + '{:.3f}'.format(round(dividend/divisor, 3))
-
-    if output == stdout.lower().rstrip("\n"):
-        return
-
-    raise check50.Mismatch(output, stdout)
 
