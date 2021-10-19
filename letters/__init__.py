@@ -22,25 +22,25 @@ def testWORD():
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
 
 @check50.check(compiles)
-def testWORD():
+def testTWO():
     """TWO words!"""
     io = split_test_io("case2.txt")
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
 
 @check50.check(compiles)
-def testWORD():
+def testaeroplane():
     """in the aeroplane over the sea"""
     io = split_test_io("case3.txt")
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
 
 @check50.check(compiles)
-def testWORD():
+def testamerican():
     """the last great american dynasty"""
     io = split_test_io("case4.txt")
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
 
 @check50.check(compiles)
-def testWORD():
+def teststrangelove():
     """Dr. Strangelove or: how I learned to stop worrying and love the bomb"""
     io = split_test_io("case5.txt")
     out = check50.run("./letters").stdin(io['in']).stdout(io['out'])
