@@ -24,13 +24,13 @@ def test83():
 def test93():
     """input of 9 and 3 yields output of 3, 0, and 3.000"""
     out = check50.run("./quotient").stdin("9").stdin("3").stdout()
-    compare_outputs(8, 3, out)
+    compare_outputs(9, 3, out)
 
 @check50.check(compiles)
 def test324():
     """input of 99 and 25 yields output of 3, 24, and 3.960"""
     out = check50.run("./quotient").stdin("99").stdin("25").stdout()
-    compare_outputs(8, 3, out)
+    compare_outputs(99, 25, out)
 
 @check50.check(compiles)
 def test1999():
