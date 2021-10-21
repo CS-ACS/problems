@@ -76,16 +76,16 @@ def grade16plus():
  
 @check50.check()
 def suscheck():
-    """prints "hello, world\\n" """
+    """Checks for suspicious output"""
     sus = 0
     if check50.run("./readability").stdin("In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.").stdout() == "Grade 7":
         sus += 1
     if check50.run("./readability").stdin("A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.").stdout() == "Grade 16+" or check50.run("./readability").stdin("A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.").stdout() == "Grade 16/+":
         sus += 2
-    if check50.run("./readability").stdin("One fish. Two fish. Red fish. Blue fish.").stdout("Kindergarten\n").stdout() == "Before Grade 1":
+    if check50.run("./readability").stdin("One fish. Two fish. Red fish. Blue fish.").stdout() == "Before Grade 1":
         sus += 2
     if check50.run("./readability").stdin("It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.").stdout() == "Grade 10":
         sus += 2
     if sus >= 2:
         help = "It looks like you may have used a solution to a previous problem set. This is against this course's policy on academic honesty. Please have a conversation with your teacher about this, delete the code you've written so far, and start over."
-        raise check50.Mismatch("Suspicious responses...\n", actual, help=help)
+        raise check50.Mismatch("Suspicious output...\n", actual, help=help)
