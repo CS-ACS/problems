@@ -74,8 +74,8 @@ def grade16plus():
     #grade 16+
     check50.run("./readability").stdin("A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.").stdout("College Student\n").stdout(check50.EOF).exit(0)
  
- @check50.check()
- def sus():
+@check50.check()
+def suscheck():
     """prints "hello, world\\n" """
     sus = 0
     if check50.run("./readability").stdin("In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.").stdout() == "Grade 7":
