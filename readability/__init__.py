@@ -76,7 +76,7 @@ def grade16plus():
  
 @check50.check()
 def suscheck():
-    """Checks for suspicious output"""
+    """Uses ARI, not Coleman-Liau"""
     sus = 0
     if check50.run("./readability").stdin("In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.").stdout() == "Grade 7":
         sus += 1
