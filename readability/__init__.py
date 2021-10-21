@@ -47,7 +47,7 @@ def multiple_sentences_complex():
     actual = check50.run("./readability").stdin("It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.").stdout()
     if expected != actual:
         help = None
-        if actual = cheated:
+        if actual == cheated:
             help = "It looks like you may have used a solution to a previous problem set. This is against this course's policy on academic honesty. Please have a conversation with your teacher about this, delete the code you've written so far, and start over."
         raise check50.Mismatch(expected, actual, help=help)
 """
