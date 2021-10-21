@@ -28,7 +28,7 @@ def no_cheating():
     """mins out at Kindergarten"""
     expected = "Kindergarten\n"
     cheated = "Before Grade 1\n"
-    actual = check50.run("./readability").stdin("a").stdout()
+    actual = check50.run("./readability").stdin("A.").stdout()
     if expected != actual:
         help = None
         if actual == cheated:
