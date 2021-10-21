@@ -38,6 +38,20 @@ def multiple_sentences():
     #grade 5
     check50.run("./readability").stdin("Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.").stdout("Grade 3\n").stdout(check50.EOF).exit(0)
 
+@check50.check()
+def multiple_sentences_complex():
+    """handles multiple more complex sentences"""
+    from re import match
+
+    expected = "College Student"
+    cheated = "Grade 10"
+    actual = check50.run("./readability").stdin("It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.").stdout()
+    if not match(expected, actual):
+        help = None
+        if match(cheated, actual):
+            help = "It looks like you may have used a solution to a previous problem set. This is against this course's policy on academic honesty. Please have a conversation with your teacher about this, delete the code you've written so far, and start over."
+        raise check50.Mismatch(expected, actual, help=help)
+"""
 @check50.check(compiles)
 def multiple_sentences_complex():
     """handles multiple more complex sentences"""
@@ -47,7 +61,7 @@ def multiple_sentences_complex():
         raise check50.Mismatch("Suspicious output...\n", actual, help=help)
     else:
         check50.run("./readability").stdin("It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.").stdout("College Student\n").stdout(check50.EOF).exit(0)
-
+"""
 @check50.check(compiles)
 def longer_passages():
     """handles longer passages"""
