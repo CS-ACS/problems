@@ -97,4 +97,4 @@ def suscheck(compiles):
     """Uses ARI, not Coleman-Liau"""
     if sus:
         help = "It looks like you may have used a solution to a previous problem set. This is against this course's policy on academic honesty. Please have a conversation with your teacher about this, delete the code you've written so far, and start over."
-        raise check50.Mismatch("ARI", "Coleman-Liau" help=help)
+        raise check50.Mismatch("ARI", "Coleman-Liau", help=help)
