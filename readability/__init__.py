@@ -31,7 +31,7 @@ def no_cheating():
     actual = check50.run("./readability").stdin("").stdout()
     if expected != actual:
         help = None
-        if actual == cheated or actual == cheated2:
+        if actual == cheated:
             help = "It looks like you might have copy-pasted some code which is against the academic honesty policy for this course. You need to have a conversation with your teacher and start over."
         raise check50.Mismatch(expected, actual, help=help)
 
