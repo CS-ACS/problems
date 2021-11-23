@@ -40,6 +40,24 @@ def testrand1():
 
     check50.run(inputs).stdout(answer)
 
+    @check50.check(compiles)
+def testrand2():
+    """behaves correctly when given a random number of random numbers"""
+    io_tuple = generate_input()
+    answer = io_tuple[1]
+    inputs = "./largest " + ' '.join(str(e) for e in io_tuple[0])
+
+    check50.run(inputs).stdout(answer)
+
+@check50.check(compiles)
+def testrand3():
+    """behaves correctly when given a random number of random numbers"""
+    io_tuple = generate_input()
+    answer = io_tuple[1]
+    inputs = "./largest " + ' '.join(str(e) for e in io_tuple[0])
+
+    check50.run(inputs).stdout(answer)
+
 
 def generate_input():
     inputs = []
