@@ -15,28 +15,28 @@ def compiles():
 @check50.check(compiles)
 def no_arguments():
     """returns error if no arguments"""
-    out = check50.run("./largest.c").stdout()
+    out = check50.run("./largest").stdout()
 
     if "usage:" not in out.lower():
-        raise check50.Mismatch(out, "Usage: ./largest.c [int 1], [int 2] ...")
+        raise check50.Mismatch("Usage: ./largest [int 1], [int 2] ...", out, )
 
 
 @check50.check(compiles)
 def one_argument():
     """behaves correctly when given only 1 argument"""
-    check50.run("./largest.c 50").stdout("50")
+    check50.run("./largest 50").stdout("50")
 
 @check50.check(compiles)
 def one_argument():
     """behaves correctly when given 2 arguments"""
-    check50.run("./largest.c 50, 5").stdout("50")
+    check50.run("./largest 50, 5").stdout("50")
 
 @check50.check(compiles)
 def testrand1():
     """behaves correctly when given a random number of random numbers"""
     io_tuple = generate_input()
     answer = io_tuple[1]
-    inputs = "./largest.c " + ' '.join(str(e) for e in io_tuple[0])
+    inputs = "./largest " + ' '.join(str(e) for e in io_tuple[0])
 
     check50.run(inputs).stdout(answer)
 
