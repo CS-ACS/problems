@@ -7,7 +7,6 @@ def exists():
     """largest.c exists"""
     check50.exists("largest.c")
 
-
 @check50.check(exists)
 def compiles():
     """largest.c compiles"""
@@ -19,7 +18,7 @@ def no_arguments():
     out = check50.run("./largest.c").stdout()
 
     if "usage:" not in out.lower():
-        raise check50.Mismatch("Usage: ./largest.c [int 1], [int 2] ...", stdout)
+        raise check50.Mismatch(out, "Usage: ./largest.c [int 1], [int 2] ...")
 
 
 @check50.check(compiles)
