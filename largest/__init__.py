@@ -6,11 +6,13 @@ from random import randint
 def exists():
     """largest.c exists"""
     check50.exists("largest.c")
+    
 
 @check50.check(exists)
 def compiles():
     """largest.c compiles"""
     check50.c.compile("largest.c", lcs50=True)
+
 
 @check50.check(compiles)
 def no_arguments():
@@ -26,10 +28,12 @@ def one_argument():
     """behaves correctly when given only 1 argument"""
     check50.run("./largest 50").stdout("50")
 
+
 @check50.check(compiles)
 def one_argument():
     """behaves correctly when given 2 arguments"""
     check50.run("./largest 50, 5").stdout("50")
+
 
 @check50.check(compiles)
 def testrand1():
@@ -40,7 +44,8 @@ def testrand1():
 
     check50.run(inputs).stdout(answer)
 
-    @check50.check(compiles)
+
+@check50.check(compiles)
 def testrand2():
     """behaves correctly when given a random number of random numbers"""
     io_tuple = generate_input()
@@ -48,6 +53,7 @@ def testrand2():
     inputs = "./largest " + ' '.join(str(e) for e in io_tuple[0])
 
     check50.run(inputs).stdout(answer)
+
 
 @check50.check(compiles)
 def testrand3():
@@ -70,7 +76,6 @@ def generate_input():
     return (inputs, max(inputs))
 
 
-
 def compare_outputs(output):
     output = "floored quotient: " + str(dividend // divisor) + "\n"
     output += "remainder: " + str(dividend % divisor) + "\n"
@@ -80,4 +85,3 @@ def compare_outputs(output):
         return
 
     raise check50.Mismatch(output, stdout)
-
