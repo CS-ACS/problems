@@ -91,7 +91,8 @@ def selection_sort(A):
                  
         # Swap the found minimum element with
         # the first element       
-        A[i], A[min_idx] = A[min_idx], A[i]
-        outputs.append(' '.join(str(e) for e in A))
+        if i != min_idx:
+            A[i], A[min_idx] = A[min_idx], A[i]
+            outputs.append(' '.join(str(e) for e in A))
 
     return '\n'.join(e for e in outputs)
