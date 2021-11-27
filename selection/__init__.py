@@ -34,7 +34,7 @@ def one_argument():
 @check50.check(compiles)
 def one_argument():
     """behaves correctly when given 2 arguments"""
-    check50.run("./selection 50, 5").stdout("5 50\n5 50")
+    check50.run("./selection 50, 5").stdout("5 50\n")
 
 
 @check50.check(compiles)
