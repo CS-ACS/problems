@@ -99,4 +99,4 @@ def selection_sort(A):
             A[i], A[min_idx] = A[min_idx], A[i]
             outputs.append(' '.join(str(e) for e in A))
 
-    return '\n'.join(e for e in outputs)
+    return '\n'.join(e for e in outputs) + "\n"
