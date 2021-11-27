@@ -77,7 +77,7 @@ def generate_input():
     return (inputs, selection_sort(inputs))
 
 
-def selection_sort(A)
+def selection_sort(A):
 # Traverse through all array elements
     outputs = []
     for i in range(len(A)):
