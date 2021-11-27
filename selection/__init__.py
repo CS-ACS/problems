@@ -68,12 +68,12 @@ def testrand3():
 
 def generate_input():
     inputs = []
-    num_inputs = randint(3, 10) // 2
+    num_inputs = randint(4, 10) // 2
 
     for i in range(num_inputs):
-        n = randint(0, 750)
+        n = randint(0, 499)
         inputs.append(n)
-        n = randint(250, 1000)
+        n = randint(500, 1000)
         inputs.append(n)
 
     return (inputs, selection_sort(inputs))
