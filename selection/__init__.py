@@ -2,6 +2,7 @@ import check50
 import check50.c
 from random import randint
 import sys
+from numpy import *
 
 @check50.check()
 def exists():
@@ -76,7 +77,7 @@ def generate_input():
         n = randint(500, 1000)
         inputs.append(n)
 
-    outputs = inputs
+    outputs = inputs.copy()
     return (inputs, selection_sort(outputs))
 
 
