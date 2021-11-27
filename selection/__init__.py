@@ -76,7 +76,8 @@ def generate_input():
         n = randint(500, 1000)
         inputs.append(n)
 
-    return (inputs, selection_sort(inputs))
+    outputs = inputs
+    return (inputs, selection_sort(outputs))
 
 
 def selection_sort(A):
