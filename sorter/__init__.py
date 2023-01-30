@@ -44,7 +44,7 @@ def insertion1():
     arr = generate_list()
     instr = "python3 sorter.py insertion " + str(arr)[1:-1].replace(",", "")
     answer = insertion_sort(arr)
-    check50.run(instr).stdout(answer)).exit()
+    check50.run(instr).stdout(answer).exit()
 
 @check50.check(exists)
 def insertion2():
