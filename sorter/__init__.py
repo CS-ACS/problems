@@ -10,7 +10,7 @@ def exists():
 def bubble1():
     """Bubble Sort"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py bubble " + str(arr)[1:-1].replace(",", "")
     answer = bubble_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
@@ -18,7 +18,7 @@ def bubble1():
 def bubble2():
     """Bubble Sort 2"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py bubble " + str(arr)[1:-1].replace(",", "")
     answer = bubble_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
@@ -26,7 +26,7 @@ def bubble2():
 def selection1():
     """Selection Sort"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py selection " + str(arr)[1:-1].replace(",", "")
     answer = selection_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
@@ -34,7 +34,7 @@ def selection1():
 def selection2():
     """Selection Sort 2"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py selection " + str(arr)[1:-1].replace(",", "")
     answer = selection_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
@@ -42,7 +42,7 @@ def selection2():
 def insertion1():
     """Insertion Sort"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py insertion " + str(arr)[1:-1].replace(",", "")
     answer = insertion_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
@@ -50,12 +50,12 @@ def insertion1():
 def insertion2():
     """Insertion Sort 2"""
     arr = generate_list()
-    instr = "python3 sorter.py " + " ".join(arr)
+    instr = "python3 sorter.py insertion " + str(arr)[1:-1].replace(",", "")
     answer = insertion_sort(arr)
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
 def generate_list():
-    return [str(randint(0, 50)) for i in range(randint(5, 20))]
+    return [randint(0, 50) for i in range(randint(5, 20))]
 
 def swap(arr, i, j):
     temp = arr[i]
@@ -96,6 +96,7 @@ def insertion_sort(l, quieter=False):
                 j -= 1
             if quieter and i != j:
                 output += str(l) + "\n"
+    return output
 
 def issorted(l):
     if all(l[i] <= l[i+1] for i in range(len(l) - 1)):
