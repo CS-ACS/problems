@@ -3,7 +3,7 @@ from random import randint
 
 @check50.check()
 def exists():
-    """credit.py exists."""
+    """sorter.py exists."""
     check50.exists("sorter.py")
 
 @check50.check(exists)
@@ -12,7 +12,7 @@ def bubble1():
     arr = generate_list()
     instr = "python3 sorter.py bubble " + str(arr)[1:-1].replace(",", "")
     answer = bubble_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 @check50.check(exists)
 def bubble2():
@@ -20,7 +20,7 @@ def bubble2():
     arr = generate_list()
     instr = "python3 sorter.py bubble " + str(arr)[1:-1].replace(",", "")
     answer = bubble_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 @check50.check(exists)
 def selection1():
@@ -28,7 +28,7 @@ def selection1():
     arr = generate_list()
     instr = "python3 sorter.py selection " + str(arr)[1:-1].replace(",", "")
     answer = selection_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 @check50.check(exists)
 def selection2():
@@ -36,7 +36,7 @@ def selection2():
     arr = generate_list()
     instr = "python3 sorter.py selection " + str(arr)[1:-1].replace(",", "")
     answer = selection_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 @check50.check(exists)
 def insertion1():
@@ -44,7 +44,7 @@ def insertion1():
     arr = generate_list()
     instr = "python3 sorter.py insertion " + str(arr)[1:-1].replace(",", "")
     answer = insertion_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 @check50.check(exists)
 def insertion2():
@@ -52,7 +52,7 @@ def insertion2():
     arr = generate_list()
     instr = "python3 sorter.py insertion " + str(arr)[1:-1].replace(",", "")
     answer = insertion_sort(arr)
-    check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
+    check50.run(instr).stdout(answer.strip()).exit()
 
 def generate_list():
     return [randint(0, 50) for i in range(randint(5, 20))]
