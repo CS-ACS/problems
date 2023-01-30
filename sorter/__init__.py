@@ -89,14 +89,13 @@ def insertion_sort(l, quieter=False):
     while not issorted(l):
         for i in range(1, len(l)):
             j = i
-            while l[j] < l[j-1]:
+            while l[j] < l[j-1] and j > 0:
                 swap(l, j, j-1)
                 if not quieter:
                     output += str(l) + "\n"
                 j -= 1
             if quieter and i != j:
                 output += str(l) + "\n"
-    return output
 
 def issorted(l):
     if all(l[i] <= l[i+1] for i in range(len(l) - 1)):
