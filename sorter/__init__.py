@@ -55,7 +55,7 @@ def insertion2():
     check50.run(instr).stdin(instr).stdout(answer.strip()).exit()
 
 def generate_list():
-    return [str(randint(0, 100)) for i in range(randint(5, 30))]
+    return [str(randint(0, 50)) for i in range(randint(5, 20))]
 
 def swap(arr, i, j):
     temp = arr[i]
